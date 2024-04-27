@@ -39,12 +39,12 @@ public class UsuarioService {
 
     //Todo: Implementando el obtener con RestTemplate
     public List<Carro> getCarros(int usuarioId) {
-        List carros = restTemplate.getForObject("http://localhost:8002/carro/usuario/" + usuarioId, List.class);
+        List carros = restTemplate.getForObject("http://carro-service/carro/usuario/" + usuarioId, List.class);
         return carros;
     }
 
     public List<Moto> getMotos(int usuarioId) {
-        List motos = restTemplate.getForObject("http://localhost:8003/moto/usuario/" + usuarioId, List.class);
+        List motos = restTemplate.getForObject("http://moto-service/moto/usuario/" + usuarioId, List.class);
         return motos;
     }
     //Todo: =======================================================================================================
